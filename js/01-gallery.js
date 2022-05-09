@@ -25,9 +25,16 @@ const selectImg = (e) => {
     const instance = basicLightbox.create(`<img src="${e.target.dataset.sourse}" width="800" height="600">`)
     instance.show()
 
+
+    window.addEventListener('keydown', (e) => {
+        if (e.key === "Escape" && instance.visible()) {
+            console.log(e.key);
+            instance.close()
+        }
+    })
+     
+    
 }
-
-
 
 gallery.addEventListener('click', selectImg);
 
