@@ -18,7 +18,7 @@ const selectImg = (e) => {
     e.preventDefault();
 
 
-    if (!e.target.classList.contains('gallery__image')) {
+    if (!e.target === IMG) {
         return
     }
     
